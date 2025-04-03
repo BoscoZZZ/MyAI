@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project is a React-based web application designed to allow users to upload PDF documents and ask AI-powered questions about their content.
+The project consists of two main components:
+The frontend is built using React, providing a clean user interface where users can upload PDF files and submit their questions.
+The backend is powered by Node.js and Express, handling file uploads and AI question-answering functionality. The core technology utilizes the LangChain framework combined with OpenAI's API, implementing the following workflow:
+When a user uploads a PDF, the system extracts and splits the content into smaller chunks
+These text chunks are converted into vectors using OpenAI's embedding model
+When a user asks a question, the system identifies the most relevant text chunks
+The GPT model (gpt-3.5-turbo) then generates an answer based on these relevant sections
+This approach enables the AI to provide answers specific to the document content rather than generic responses. Technically, this is known as a "RAG" (Retrieval-Augmented Generation) application, combining the strengths of document retrieval and generative AI to deliver more accurate and targeted answers.
+
 ## Available Scripts
 
 In the project directory, you can run:
